@@ -14,26 +14,41 @@ search-table {
   // 条件区
   search:[
     {
+      id:'age',
       type:'text',
     },{
+      id:'name',
       placeholder:'请输入姓名',
       type:'text'
     },
     {
-      label:'姓名',
+      id:'tel',
+      label:'电话',
       placeholder:'请输入',
       type:'text'
     },{
+      id:'area',
+      label:'地区',
       type: 'select',
-      select:[
+      init: 0,
+      data:[
         {
           value: 0,
-          text: '项目一'
+          text: '河南',
+          checked: true,
         },{
           value: 1,
-          text: '项目一'
+          text: '北京'
         }
       ]
+    },{
+      id:'startTime',
+      label: '开始时间',
+      type:'date'
+    },{
+      id:'endTime',
+      label: '结束时间',
+      type:'date'
     },{
       label:'搜索',
       type:'submit',
@@ -52,11 +67,12 @@ search-table {
     {
       [label:'demo',]
       [placeholder:'请输入',]
-      type:'text|select|date|submit|action',
+      type:'text|select|date|button|submit|action',
+      [init:0,]
       [url:'',
       method:'',
       data:{},]
-      [select:[
+      [data:[
         {
           key: 0,
           value: '项目一'
