@@ -90,7 +90,7 @@ search-table {
   ],
   // 附加区 - 换页触发
   onchange:(pagedata)=>{
-
+    return '<h1>附加区</h1>'
   },
 
   // 数据区
