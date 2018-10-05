@@ -2,6 +2,12 @@
 
 ![](react-search-table.png)
 
+#### Todo list
+
+- 渲染数据结构
+- 数据请求（url,method）
+- 操作（重置条件、时间）
+
 #### 数据结构
 ```
 search-table {
@@ -30,7 +36,12 @@ search-table {
       ]
     },{
       label:'搜索',
-      type:'submit'
+      type:'submit',
+      url:'/getusername',
+      method:'GET',
+      data:{
+        id:1
+      }
     },{
       label:'新增',
       type:'action',
@@ -42,6 +53,9 @@ search-table {
       [label:'demo',]
       [placeholder:'请输入',]
       type:'text|select|date|submit|action',
+      [url:'',
+      method:'',
+      data:{},]
       [select:[
         {
           key: 0,
